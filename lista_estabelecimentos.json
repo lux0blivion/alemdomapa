@@ -118,5 +118,61 @@
     "endereco": "Rua da Harmonia, 45, Casa Amarela, Recife",
     "telefone": "(81) 98555-6677",
     "bio": "O verdadeiro boteco recifense! Cerveja gelada, tira-gostos tradicionais, transmissão de jogos e ambiente popular."
+  },
+  {
+    "nome": "Arrasta-Pé do Cais",
+    "interesses": ["Forró", "Regional", "Dança"],
+    "regiao": "recife - pernambuco",
+    "endereco": "Rua do Brum, 120, Recife Antigo, Recife",
+    "telefone": "(81) 99222-3344",
+    "bio": "Venha dançar o autêntico forró pé-de-serra em um dos casarões históricos do Recife Antigo. Música ao vivo e muita animação."
+  },
+  {
+    "nome": "Quintal Criativo de Olinda",
+    "interesses": ["Arte", "Ar Livre", "Artesanal"],
+    "regiao": "olinda - pernambuco",
+    "endereco": "Rua de São Bento, 450, Sítio Histórico, Olinda (fundos)",
+    "telefone": "(81) 98444-5566",
+    "bio": "Um refúgio em Olinda com jardim, exposições de artistas locais, oficinas de artesanato e comidinhas feitas com carinho."
+  },
+  {
+    "nome": "Esquenta Esporte Bar",
+    "interesses": ["Happy Hour", "Futebol", "Petiscos"],
+    "regiao": "recife - pernambuco",
+    "endereco": "Rua Visconde de Goiana, 333, Derby, Recife",
+    "telefone": "(81) 99666-7788",
+    "bio": "O ponto de encontro para assistir aos jogos do seu time! Telões, cerveja gelada, petiscos caprichados e promoções de happy hour."
+  },
+  {
+    "nome": "Mirante Sereno Olinda",
+    "interesses": ["Tranquilo", "Vista", "MPB"],
+    "regiao": "olinda - pernambuco",
+    "endereco": "Alto da Sé, Mirante da Caixa D'Água, Olinda",
+    "telefone": "(81) 98777-8899",
+    "bio": "Aprecie a vista mais famosa de Olinda ao som de MPB acústico. Um lugar tranquilo para relaxar, tomar um bom vinho e conversar."
+  },
+  {
+    "nome": "Pulso Urbano Club",
+    "interesses": ["Eletrônico", "Pop", "Alternativo"],
+    "regiao": "recife - pernambuco",
+    "endereco": "Rua das Pernambucanas, 200, Graças, Recife",
+    "telefone": "(81) 99333-1122",
+    "bio": "Balada com foco em indie dance, synth-pop e vertentes alternativas da música eletrônica. Ambiente moderno e drinks autorais."
+  },
+  {
+    "nome": "Taberna Valhalla",
+    "interesses": ["Rock", "Temático", "Artesanal"],
+    "regiao": "recife - pernambuco",
+    "endereco": "Rua do Hospício, 777, Boa Vista, Recife",
+    "telefone": "(81) 98989-0011",
+    "bio": "Entre no mundo Viking! Decoração temática, hidromel artesanal, cervejas especiais e muito rock 'n' roll."
+  },
+  {
+    "nome": "Alto Astral Lounge",
+    "interesses": ["Popular", "Ao Vivo", "Drinks"],
+    "regiao": "olinda - pernambuco",
+    "endereco": "Avenida Sigismundo Gonçalves, 512, Carmo, Olinda",
+    "telefone": "(81) 99191-2233",
+    "bio": "Música popular brasileira ao vivo, axé das antigas e pagode em um ambiente descontraído com drinks tropicais e vista para o mar de Olinda."
   }
 ]

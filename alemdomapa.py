@@ -1,14 +1,17 @@
 import sqlite3
 import re
 import json
+import random
 
 estabelecimentos_json = 'lista_estabelecimentos.json'
+
+#Variavel que vai guardar os dados do estabelecimentos
 dados_estabelecimentos = []
 try:
     with open(estabelecimentos_json, 'r', encoding='utf-8') as arquivo:
-        #Ler o dados do json e coloca na variavel estabelecimentos_json
+        #Ler o dados do json e inseri-los na variavel dados_estabelecimentos
         dados_estabelecimentos = json.load(arquivo)
-
+ #Tratamento de erros: Arquivo não encontrado, Json invalido e outros.
 except FileNotFoundError:
     print(f"Erro: O arquivo '{estabelecimentos_json}' não foi encontrado. Verifique o nome e o caminho do arquivo.")
 except json.JSONDecodeError:
@@ -121,7 +124,7 @@ def criar_usuario():
     * Drinks             * Petiscos           * Vinhos            
     * Eletrônico         * Pop                * Vista   
     """)
-    print("Escolha seus interesses (três):")
+    print("Escolha três interesses")
     i1 = input("Digite seu primeiro interesse: ")
     i2 = input("Digite seu segundo interesse: ")
     i3 = input("Digite seu terceiro interesse: ")
@@ -213,7 +216,7 @@ def atualizar_perfil():
         nome = input("Novo nome (pressione Enter para manter e passar para o próximo): ") or pessoa[1]
         email = input("Novo email (pressione Enter para manter e passar para o próximo): ") or pessoa[2]
         senha = input("Nova senha (pressione Enter para manter e passar para o próximo): ") or pessoa[3]
-        interesses = input("Novos interesses (pressione Enter para manter e passar para o próximo): ") or pessoa[4]
+        interesses = input("Novos interesses (pressione Enter para manter e passar para o próximo): exemplo: Pop, Vinil, MPB") or pessoa[4]
         regiao = input("Nova região (pressione Enter para manter): ") or pessoa[5]
 
         cursor.execute("""
@@ -304,23 +307,26 @@ def ver_dados_por_id():
 # Menus 
 def menu_principal():
     print("\n=== MENU PRINCIPAL ===")
-    print("1. Ir para área de sugestões")
-    print("2. Atualizar dados do perfil")
-    print("3. Excluir Perfil")
-    print("4. Ver meus dados")
-    print("5. Sair")
+    print("\n1. 📜 Ir para Área de Sugestões")
+    print("\n2. 🎲 Ir para Recomendações Aleatórias")
+    print("\n3. 💾 Atualizar dados do perfil")
+    print("\n4. ❗ Excluir Perfil")
+    print("\n5. 📄 Ver meus dados")
+    print("\n6. 🚪 Sair")
 
     escolha = input("Escolha uma opção: ")
 
     if escolha == "1":
         recomendar_estabelecimentos()
     elif escolha == "2":
-        atualizar_perfil()
+        recomendacao_aleatoria()
     elif escolha == "3":
-        excluir_perfil()
+        atualizar_perfil()
     elif escolha == "4":
-        ver_dados_por_id()
+        excluir_perfil()
     elif escolha == "5":
+        ver_dados_por_id()
+    elif escolha == "6":
         print("Saindo...")
         exit()
     else:
@@ -330,9 +336,9 @@ def menu_principal():
 
 def menu_inicial():
     print("=== MENU INICIAL ===")
-    print("1. Cadastrar Usuário")
-    print("2. Cadastrar Estabelecimento")
-    print("3. Login (em breve)")
+    print("\n1. 👤 Cadastrar Usuário")
+    print("\n2. 🏪 Cadastrar Estabelecimento")
+    print("\n3. 🔑 Login (em breve)")
     escolha = input("Escolha uma opção: ")
 
     if escolha == "1":
@@ -358,7 +364,7 @@ def recomendar_estabelecimentos():
     if not u:
         print('Usuario não encontrado')
         return
-    #formatação da string, para uma lista separando os itens com a virgula
+    #formatação da string para minúsculo e em uma lista separando os itens com a virgula
     interesses_usuario = [i.strip().lower() for i in u[4].split(',')]
     regiao_usuario = u[5].lower()
     estabelecimentos = dados_estabelecimentos
@@ -366,6 +372,7 @@ def recomendar_estabelecimentos():
     #Lista onde vai ficar os matchs do usuario com os estabelecimentos
     recomendados = []
 
+    #Formatando os interesses para minúsculo
     usuario_interesses = [interesse.lower() for interesse in interesses_usuario]
     usuario_regiao = regiao_usuario.lower()
 
@@ -387,17 +394,36 @@ def recomendar_estabelecimentos():
 
 
     if not recomendados:
-        print("Não encontramos estabelecimentos compatives com seus interesses nessa região :( \nTente alterar seus interesses.")
-        return
+        print('\n⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘')
+        print('\n(╥﹏╥) (╥﹏╥) (╥﹏╥) (╥﹏╥)')
+        print("🥺 Não encontramos estabelecimentos compatives com seus interesses nessa região :( \nTente alterar seus interesses.")
+        print('\n⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘')
+        menu_principal()
     
+    print('\n✦·┈๑⋅⋯ ⋯⋅๑┈·✦ ✦·┈๑⋅⋯ ⋯⋅๑┈·✦ ✦·┈๑⋅⋯ ⋯⋅๑┈·✦ ✦·┈๑⋅⋯ ⋯⋅๑┈·✦ ✦·┈๑⋅⋯ ⋯⋅๑┈·✦ ✦·┈๑⋅⋯ ⋯⋅๑┈·✦ ✦·┈๑⋅⋯ ⋯⋅๑┈·✦ ✦·┈๑⋅⋯ ⋯⋅๑┈·✦ ✦·┈๑⋅⋯ ⋯⋅๑┈·✦')
     print("\nEstabelecimentos recomendados com base em seus interesses: ")
-    #Printar o nome e o interesses para cada item da lista (recomendacoes)
+    #Printar o nome e o interesses para cada item da lista (recomendados)
     for rec in recomendados:
-        print(f"\n{rec['nome']}")
-        print(f"Interesses em comum: {', '.join(rec['interesses_em_comum'])}")
-        print(f"Região: {rec['regiao']}")
+        print(f"\n🔖 {rec['nome']}")
+        print(f"💟 Interesses em comum: {', '.join(rec['interesses_em_comum'])}")
+        print(f"🗺️  Região: {rec['regiao']}")
 
- 
+    print('✦·┈๑⋅⋯ ⋯⋅๑┈·✦ ✦·┈๑⋅⋯ ⋯⋅๑┈·✦ ✦·┈๑⋅⋯ ⋯⋅๑┈·✦ ✦·┈๑⋅⋯ ⋯⋅๑┈·✦ ✦·┈๑⋅⋯ ⋯⋅๑┈·✦ ✦·┈๑⋅⋯ ⋯⋅๑┈·✦ ✦·┈๑⋅⋯ ⋯⋅๑┈·✦ ✦·┈๑⋅⋯ ⋯⋅๑┈·✦ ✦·┈๑⋅⋯ ⋯⋅๑┈·✦')
+    
+
+
+def recomendacao_aleatoria():
+    print('\n──── ୨୧ ──────── ୨୧ ──────── ୨୧ ──────── ୨୧ ──────── ୨୧ ──────── ୨୧ ──────── ୨୧ ──────── ୨୧ ──────── ୨୧ ────')
+    print('\nA vida é feita de novas experiências. Permita-se sair do óbvio e descubra lugares incríveis')
+    estabelecimentos_sorteados = (random.sample(dados_estabelecimentos, k=3))
+    for i in estabelecimentos_sorteados:
+        print(f'\n 🔖 Nome: {i['nome']}')
+        print(f'💟 Interesses: {', '.join(i['interesses'])}')
+        print(f'🗺️  Região: {i['regiao']}')
+        print(f'📍 Endereço: {i['endereco']}')
+        print(f'📞 Telefone: {i['telefone']}')
+        print(f'📖 Bio: {i['bio']}')
+        print('﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌'*7)
 
 
 # Inicia o sistema
