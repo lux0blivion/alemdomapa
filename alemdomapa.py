@@ -372,10 +372,6 @@ def recomendar_estabelecimentos():
     #Lista onde vai ficar os matchs do usuario com os estabelecimentos
     recomendados = []
 
-    #Formatando os interesses para minúsculo
-    usuario_interesses = [interesse.lower() for interesse in interesses_usuario]
-    usuario_regiao = regiao_usuario.lower()
-
     #for para separar os estabelecimentos
     for estabelecimento in estabelecimentos:
 
@@ -383,8 +379,8 @@ def recomendar_estabelecimentos():
         interesses_estabelecimento = [i.lower() for i in estabelecimento['interesses']]
 
 
-        if regiao_estabelecimento == usuario_regiao:
-            interesses_em_comum = set(usuario_interesses) & set(interesses_estabelecimento)
+        if regiao_estabelecimento == regiao_usuario:
+            interesses_em_comum = set(interesses_usuario) & set(interesses_estabelecimento)
             if interesses_em_comum:
                 recomendados.append({
                     'nome': estabelecimento['nome'],
