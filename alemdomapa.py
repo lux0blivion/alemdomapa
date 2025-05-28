@@ -89,6 +89,35 @@ def tipo_de_perfil():
     else:
         print("❌ Tipo inválido. Tente novamente.\n")
         return tipo_de_perfil()
+    
+def login():
+    print("=== LOGIN ===")
+    tipo = tipo_de_perfil()
+    email = input("Email: ").strip()
+    senha = input("Senha: ").strip()
+
+
+    if tipo == "usuario":
+        cursor.execute("SELECT * FROM usuarios WHERE email=? AND senha=?", (email, senha))
+        usuario = cursor.fetchone()
+        if usuario:
+            print(f"\n✅ Login bem-sucedido! Bem-vindo, {usuario[1]} (ID: {usuario[0]})")
+            menu_principal()
+        else:
+            print("❌ Email ou senha incorretos.")
+
+
+    elif tipo == "estabelecimento":
+        cursor.execute("SELECT * FROM estabelecimentos WHERE email=? AND senha=?", (email, senha))
+        est = cursor.fetchone()
+        if est:
+            print(f"\n✅ Login bem-sucedido! Bem-vindo, {est[1]} (ID: {est[0]})")
+            menu_principal()
+        else:
+            print("❌ Email ou senha incorretos.")
+
+
+
 
 #  Cadastro 
 def criar_usuario():
@@ -338,7 +367,7 @@ def menu_inicial():
     print("=== MENU INICIAL ===")
     print("\n1. 👤 Cadastrar Usuário")
     print("\n2. 🏪 Cadastrar Estabelecimento")
-    print("\n3. 🔑 Login (em breve)")
+    print("\n3. 🔑 Login")
     escolha = input("Escolha uma opção: ")
 
     if escolha == "1":
@@ -348,7 +377,7 @@ def menu_inicial():
         criar_estabelecimento()
         menu_principal()
     elif escolha == "3":
-        print("Funcionalidade de login em desenvolvimento.")
+        login()
     else:
         print("❌ Opção inválida.")
         menu_inicial()
