@@ -232,13 +232,13 @@ def atualizar_perfil():
             print("❌ Estabelecimento não encontrado.")
             return
 
-        nome = input("Novo nome (pressione Enter para manter): ") or est[1]
-        email = input("Novo email (pressione Enter para manter): ") or est[2]
-        senha = input("Nova senha (pressione Enter para manter): ") or est[3]
-        endereco = input("Novo endereço (pressione Enter para manter): ") or est[4]
-        interesses = input("Novos interesses (pressione Enter para manter): ") or est[5]
-        bio = input("Nova bio (pressione Enter para manter): ") or est[6]
-        telefone = input("Novo telefone (pressione Enter para manter): ") or est[7]
+        nome = input("Novo nome (pressione Enter para manter e passar para o próximo): ") or est[1]
+        email = input("Novo email (pressione Enter para manter e passar para o próximo): ") or est[2]
+        senha = input("Nova senha (pressione Enter para manter e passar para o próximo): ") or est[3]
+        endereco = input("Novo endereço (pressione Enter para manter e passar para o próximo ): ") or est[4]
+        interesses = input("Novos interesses (pressione Enter para manter e passar para o próximo): ") or est[5]
+        bio = input("Nova bio (pressione Enter para manter e passar para o próximo): ") or est[6]
+        telefone = input("Novo telefone (pressione Enter para manter e passar para o próximo): ") or est[7]
         regiao = input("Nova região (pressione Enter para manter): ") or est[8]
 
         cursor.execute("""
