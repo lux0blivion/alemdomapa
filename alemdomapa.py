@@ -442,12 +442,12 @@ def recomendacao_aleatoria():
     print('\nA vida é feita de novas experiências. Permita-se sair do óbvio e descubra lugares incríveis')
     estabelecimentos_sorteados = (random.sample(dados_estabelecimentos, k=3))
     for i in estabelecimentos_sorteados:
-        print(f'\n 🔖 Nome: {i['nome']}')
-        print(f'💟 Interesses: {', '.join(i['interesses'])}')
-        print(f'🗺️  Região: {i['regiao']}')
-        print(f'📍 Endereço: {i['endereco']}')
-        print(f'📞 Telefone: {i['telefone']}')
-        print(f'📖 Bio: {i['bio']}')
+        print(f"\n 🔖 Nome: {i['nome']}")
+        print(f"💟 Interesses: {', '.join(i['interesses'])}")
+        print(f"🗺️  Região: {i['regiao']}")
+        print(f"📍 Endereço: {i['endereco']}")
+        print(f"📞 Telefone: {i['telefone']}")
+        print(f"📖 Bio: {i['bio']}")
         print('﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌'*7)
 
 
