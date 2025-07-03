@@ -1,0 +1,25 @@
+[
+    {
+        "id": 1,
+        "nome": "clara",
+        "email": "123@gmail.com",
+        "senha": "12345678m",
+        "interesses": [
+            "MPB",
+            "Pop",
+            "Vinhos"
+        ],
+        "regiao": "Recife - Pernambuco"
+    },
+    {
+        "id": 2,
+        "nome": "yuri",
+        "email": "helena1@gmail.com",
+        "senha": "123456789m",
+        "interesses": [
+            "vinil",
+            "pop"
+        ],
+        "regiao": "VEGANO"
+    }
+]

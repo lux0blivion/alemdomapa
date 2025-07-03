@@ -1,0 +1,347 @@
+[
+    {
+        "id": 1,
+        "nome": "Vinil Bar",
+        "email": "vinilbar@gmail.com",
+        "senha": "senha123",
+        "interesses": [
+            "Vinil",
+            "Jazz",
+            "Íntimo"
+        ],
+        "regiao": "recife - pernambuco",
+        "endereco": "Rua da Moeda, 102, Recife Antigo, Recife",
+        "telefone": "(81) 98877-1234",
+        "bio": "Bar aconchegante com uma vasta coleção de vinil, focado em jazz e blues, perfeito para um encontro mais reservado."
+    },
+    {
+        "id": 2,
+        "nome": "Pátio do Samba",
+        "email": "patiosamba@gmail.com",
+        "senha": "senha123",
+        "interesses": [
+            "Samba",
+            "Boteco",
+            "Artesanal"
+        ],
+        "regiao": "olinda - pernambuco",
+        "endereco": "Ladeira da Misericórdia, 78, Sítio Histórico, Olinda",
+        "telefone": "(81) 99988-5678",
+        "bio": "Autêntica roda de samba, petiscos de boteco e cervejas artesanais locais em um ambiente vibrante de Olinda."
+    },
+    {
+        "id": 3,
+        "nome": "Pixel Bar",
+        "email": "pixelbar@gmail.com",
+        "senha": "senha123",
+        "interesses": [
+            "Jogos",
+            "Geek",
+            "Temático"
+        ],
+        "regiao": "recife - pernambuco",
+        "endereco": "Av. Conselheiro Aguiar, 1250, Boa Viagem, Recife",
+        "telefone": "(81) 98123-4567",
+        "bio": "O paraíso dos geeks! Muitos jogos de tabuleiro e eletrônicos, drinks temáticos e eventos da cultura pop."
+    },
+    {
+        "id": 4,
+        "nome": "Arena Sertaneja",
+        "email": "arenasertaneja@gmail.com",
+        "senha": "senha123",
+        "interesses": [
+            "Sertanejo",
+            "Ao Vivo",
+            "Dança"
+        ],
+        "regiao": "jaboatão dos guararapes - pernambuco",
+        "endereco": "Av. Bernardo Vieira de Melo, 3400, Piedade, Jaboatão",
+        "telefone": "(81) 99777-8899",
+        "bio": "Shows ao vivo com o melhor do sertanejo, pista de dança animada e ambiente para quem gosta de festar."
+    },
+    {
+        "id": 5,
+        "nome": "Café Aconchego",
+        "email": "cafeaconchego@gmail.com",
+        "senha": "senha123",
+        "interesses": [
+            "Café",
+            "Pet-Friendly",
+            "Tranquilo"
+        ],
+        "regiao": "recife - pernambuco",
+        "endereco": "Rua do Futuro, 959, Graças, Recife",
+        "telefone": "(81) 98234-5679",
+        "bio": "Traga seu pet para desfrutar de cafés especiais em nossa varanda. Um oásis de tranquilidade e sabor na cidade."
+    },
+    {
+        "id": 6,
+        "nome": "Underground Rock Club",
+        "email": "rockclub@gmail.com",
+        "senha": "senha123",
+        "interesses": [
+            "Rock",
+            "Alternativo",
+            "Sinuca"
+        ],
+        "regiao": "recife - pernambuco",
+        "endereco": "Rua das Ninfas, 54, Boa Vista, Recife",
+        "telefone": "(81) 99654-3210",
+        "bio": "Noites de rock, do clássico ao alternativo, com mesa de sinuca e um ambiente descolado e autêntico."
+    },
+    {
+        "id": 7,
+        "nome": "Glow Party",
+        "email": "glowparty@gmail.com",
+        "senha": "senha123",
+        "interesses": [
+            "Balada",
+            "LGBT",
+            "Pop"
+        ],
+        "regiao": "recife - pernambuco",
+        "endereco": "Av. Herculano Bandeira, 777, Pina, Recife",
+        "telefone": "(81) 98888-1111",
+        "bio": "A sua noite de diversidade e brilho! Balada LGBT com os melhores hits pop, performances e um ambiente acolhedor."
+    },
+    {
+        "id": 8,
+        "nome": "Forró da Vila",
+        "email": "forrodavila@gmail.com",
+        "senha": "senha123",
+        "interesses": [
+            "Forró",
+            "Regional",
+            "Ar Livre"
+        ],
+        "regiao": "paulista - pernambuco",
+        "endereco": "Estrada do Catolé, S/N, Chã de Cruz, Paulista",
+        "telefone": "(81) 99111-2233",
+        "bio": "Sinta a tradição nordestina com muito forró, comidas regionais e um amplo espaço ao ar livre para dançar e celebrar."
+    },
+    {
+        "id": 9,
+        "nome": "Bar MPB & Vinhos",
+        "email": "barmpbvinhos@gmail.com",
+        "senha": "senha123",
+        "interesses": [
+            "MPB",
+            "Vinhos",
+            "Íntimo"
+        ],
+        "regiao": "recife - pernambuco",
+        "endereco": "Rua da Alfândega, 35, Recife Antigo, Recife (2º andar)",
+        "telefone": "(81) 98765-4321",
+        "bio": "Espaço charmoso para apreciar bons vinhos ao som de MPB acústico. Perfeito para casais e apreciadores de boa música."
+    },
+    {
+        "id": 10,
+        "nome": "Clube da Comédia",
+        "email": "clubedacomedia@gmail.com",
+        "senha": "senha123",
+        "interesses": [
+            "Comédia",
+            "Petiscos",
+            "Happy Hour"
+        ],
+        "regiao": "recife - pernambuco",
+        "endereco": "Rua da Guia, 222, Bairro do Recife, Recife",
+        "telefone": "(81) 99555-4433",
+        "bio": "Gargalhadas garantidas com stand-up comedy. Aproveite nosso happy hour e deliciosos petiscos em um ambiente divertido."
+    },
+    {
+        "id": 11,
+        "nome": "Café com Arte",
+        "email": "cafecomarte@gmail.com",
+        "senha": "senha123",
+        "interesses": [
+            "Cultural",
+            "Arte",
+            "Café"
+        ],
+        "regiao": "recife - pernambuco",
+        "endereco": "Praça de Casa Forte, 454, Casa Forte, Recife",
+        "telefone": "(81) 98333-7766",
+        "bio": "Um café que respira arte. Exposições rotativas, ambiente inspirador e cafés especiais para acompanhar sua visita cultural."
+    },
+    {
+        "id": 12,
+        "nome": "Solta a Voz Karaokê",
+        "email": "soltavoz@gmail.com",
+        "senha": "senha123",
+        "interesses": [
+            "Karaokê",
+            "Drinks",
+            "Grupos"
+        ],
+        "regiao": "recife - pernambuco",
+        "endereco": "Av. Domingos Ferreira, 4060, Boa Viagem, Recife",
+        "telefone": "(81) 99432-1098",
+        "bio": "Solte a voz em nosso karaokê! Cardápio variado de músicas, drinks clássicos e espaço ideal para reunir os amigos."
+    },
+    {
+        "id": 13,
+        "nome": "Verde Sabor",
+        "email": "verdesabor@gmail.com",
+        "senha": "senha123",
+        "interesses": [
+            "Vegano",
+            "Saudável",
+            "Sucos"
+        ],
+        "regiao": "olinda - pernambuco",
+        "endereco": "Rua do Amparo, 150, Amparo, Olinda",
+        "telefone": "(81) 98665-5544",
+        "bio": "Delícias 100% vegetais, com opções veganas e vegetarianas criativas e saborosas. Sucos frescos e ambiente acolhedor em Olinda."
+    },
+    {
+        "id": 14,
+        "nome": "Rooftop Beats",
+        "email": "rooftopbeats@gmail.com",
+        "senha": "senha123",
+        "interesses": [
+            "Eletrônico",
+            "Vista",
+            "DJ"
+        ],
+        "regiao": "recife - pernambuco",
+        "endereco": "Rooftop do Ed. Pernambuco, Av. Dantas Barreto, 500, Santo Antônio, Recife",
+        "telefone": "(81) 99900-0011",
+        "bio": "Curta o melhor da música eletrônica com DJs convidados e uma vista deslumbrante do Recife. Festas memoráveis no nosso rooftop."
+    },
+    {
+        "id": 15,
+        "nome": "Boteco Raiz",
+        "email": "botecoraiz@gmail.com",
+        "senha": "senha123",
+        "interesses": [
+            "Boteco",
+            "Futebol",
+            "Popular"
+        ],
+        "regiao": "recife - pernambuco",
+        "endereco": "Rua da Harmonia, 45, Casa Amarela, Recife",
+        "telefone": "(81) 98555-6677",
+        "bio": "O verdadeiro boteco recifense! Cerveja gelada, tira-gostos tradicionais, transmissão de jogos e ambiente popular."
+    },
+    {
+        "id": 16,
+        "nome": "Arrasta-Pé do Cais",
+        "email": "arrastape@gmail.com",
+        "senha": "senha123",
+        "interesses": [
+            "Forró",
+            "Regional",
+            "Dança"
+        ],
+        "regiao": "recife - pernambuco",
+        "endereco": "Rua do Brum, 120, Recife Antigo, Recife",
+        "telefone": "(81) 99222-3344",
+        "bio": "Venha dançar o autêntico forró pé-de-serra em um dos casarões históricos do Recife Antigo. Música ao vivo e muita animação."
+    },
+    {
+        "id": 17,
+        "nome": "Quintal Criativo de Olinda",
+        "email": "quintalcriativo@gmail.com",
+        "senha": "senha123",
+        "interesses": [
+            "Arte",
+            "Ar Livre",
+            "Artesanal"
+        ],
+        "regiao": "olinda - pernambuco",
+        "endereco": "Rua de São Bento, 450, Sítio Histórico, Olinda (fundos)",
+        "telefone": "(81) 98444-5566",
+        "bio": "Um refúgio em Olinda com jardim, exposições de artistas locais, oficinas de artesanato e comidinhas feitas com carinho."
+    },
+    {
+        "id": 18,
+        "nome": "Esquenta Esporte Bar",
+        "email": "esquentaesporte@gmail.com",
+        "senha": "senha123",
+        "interesses": [
+            "Happy Hour",
+            "Futebol",
+            "Petiscos"
+        ],
+        "regiao": "recife - pernambuco",
+        "endereco": "Rua Visconde de Goiana, 333, Derby, Recife",
+        "telefone": "(81) 99666-7788",
+        "bio": "O ponto de encontro para assistir aos jogos do seu time! Telões, cerveja gelada, petiscos caprichados e promoções de happy hour."
+    },
+    {
+        "id": 19,
+        "nome": "Mirante Sereno Olinda",
+        "email": "mirantesereno@gmail.com",
+        "senha": "senha123",
+        "interesses": [
+            "Tranquilo",
+            "Vista",
+            "MPB"
+        ],
+        "regiao": "olinda - pernambuco",
+        "endereco": "Alto da Sé, Mirante da Caixa D'Água, Olinda",
+        "telefone": "(81) 98777-8899",
+        "bio": "Aprecie a vista mais famosa de Olinda ao som de MPB acústico. Um lugar tranquilo para relaxar, tomar um bom vinho e conversar."
+    },
+    {
+        "id": 20,
+        "nome": "Pulso Urbano Club",
+        "email": "pulsourbano@gmail.com",
+        "senha": "senha123",
+        "interesses": [
+            "Eletrônico",
+            "Pop",
+            "Alternativo"
+        ],
+        "regiao": "recife - pernambuco",
+        "endereco": "Rua das Pernambucanas, 200, Graças, Recife",
+        "telefone": "(81) 99333-1122",
+        "bio": "Balada com foco em indie dance, synth-pop e vertentes alternativas da música eletrônica. Ambiente moderno e drinks autorais."
+    },
+    {
+        "id": 21,
+        "nome": "Taberna Valhalla",
+        "email": "tabernavalhalla@gmail.com",
+        "senha": "senha123",
+        "interesses": [
+            "Rock",
+            "Temático",
+            "Artesanal"
+        ],
+        "regiao": "recife - pernambuco",
+        "endereco": "Rua do Hospício, 777, Boa Vista, Recife",
+        "telefone": "(81) 98989-0011",
+        "bio": "Entre no mundo Viking! Decoração temática, hidromel artesanal, cervejas especiais e muito rock 'n' roll."
+    },
+    {
+        "id": 22,
+        "nome": "Alto Astral Lounge",
+        "email": "altoastral@gmail.com",
+        "senha": "senha123",
+        "interesses": [
+            "Popular",
+            "Ao Vivo",
+            "Drinks"
+        ],
+        "regiao": "olinda - pernambuco",
+        "endereco": "Avenida Sigismundo Gonçalves, 512, Carmo, Olinda",
+        "telefone": "(81) 99191-2233",
+        "bio": "Música popular brasileira ao vivo, axé das antigas e pagode em um ambiente descontraído com drinks tropicais e vista para o mar de Olinda."
+    },
+    {
+        "id": 23,
+        "nome": "yoki",
+        "email": "yoki@gmail.com",
+        "senha": "12345678m",
+        "endereco": "recife, pernambuco",
+        "interesses": [
+            "Pop",
+            "Vinhos",
+            "Vinil"
+        ],
+        "bio": "Oi sou o yoki",
+        "telefone": "81986590823",
+        "regiao": "Recife - Pernambuco"
+    }
+]
