@@ -6,6 +6,68 @@ estabelecimentos_json = 'estabelecimentos.json'
 dados_usuarios = carregar_dados(usuarios_json)
 dados_estabelecimentos = carregar_dados(estabelecimentos_json)
 
+def recomendar_estabelecimentos(user_logado):
+    """
+    Recomenda estabelecimentos com base nos interesses, região
+    e avaliação média mínima de 3.5.
+    """
+    if not user_logado:
+        print('Usuário não encontrado.')
+        return
+
+    interesses_usuario = [i.strip().lower() for i in user_logado.interesses]
+    regiao_usuario = user_logado.regiao.lower()
+
+    recomendados = []
+
+    for est in dados_estabelecimentos:
+        regiao_estabelecimento = est['regiao'].lower()
+        interesses_estabelecimento = [i.lower() for i in est['interesses']]
+
+        if regiao_estabelecimento == regiao_usuario:
+            interesses_em_comum = set(interesses_usuario) & set(interesses_estabelecimento)
+
+            avaliacoes = est.get('avaliacoes', [])
+            media = sum(avaliacoes) / len(avaliacoes) if avaliacoes else 0
+
+            if interesses_em_comum and media >= 3.5:
+                recomendados.append({
+                    'nome': est['nome'],
+                    'interesses_em_comum': list(interesses_em_comum),
+                    'regiao': regiao_estabelecimento,
+                    'bio': est['bio'],
+                    'endereco': est['endereco'],
+                    'telefone': est['telefone'],
+                    'interesses': est['interesses'],
+                    'media': round(media, 2)
+                })
+
+    if not recomendados:
+        print("\n🥺 Nenhum estabelecimento compatível com seus interesses, região e avaliações.")
+        return
+
+    print("\n✨ Estabelecimentos recomendados com base em seus interesses e avaliações:")
+
+    for i, rec in enumerate(recomendados, start=1):
+        print(f"\n🔖 {i}. {rec['nome']}")
+        print(f"💟 Interesses em comum: {', '.join(rec['interesses_em_comum']).capitalize()}")
+        print(f"🗺  Região: {rec['regiao']}")
+        print(f"⭐ Média de avaliações: {rec['media']}")
+
+    try:
+        indice = int(input("\nDigite o número de um estabelecimento para ver detalhes: "))
+        if 1 <= indice <= len(recomendados):
+            selecionado = recomendados[indice - 1]
+            print(f"\n📍 {selecionado['nome']}")
+            print(f"{selecionado['bio']}")
+            print(f"⭐ Média: {selecionado['media']}")
+            print(f"🎯 Interesses: {', '.join(selecionado['interesses']).title()}")
+            print(f"📞 Telefone: {selecionado['telefone']}")
+            print(f"📍 Endereço: {selecionado['endereco']}")
+        else:
+            print("Número inválido.")
+    except ValueError:
+        print("Entrada inválida.")
 
 def recomendar_estabelecimentos(user_logado):
     """
